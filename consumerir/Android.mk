@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2012 The CyanogenMod Project
+# Copyright (C) 2013 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,22 +11,18 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-$(call inherit-product, device/samsung/p5100/p51xx-common.mk)
+# HAL module implementation stored in
+# hw/<POWERS_HARDWARE_MODULE_ID>.<ro.hardware>.so
 
-LOCAL_PATH := device/samsung/p5110
+LOCAL_PATH := $(call my-dir)
 
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+include $(CLEAR_VARS)
 
-# Audio
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/espresso10wifi \
-    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
+LOCAL_MODULE := consumerir.piranha
+LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
+LOCAL_SRC_FILES := consumerir.c
+LOCAL_SHARED_LIBRARIES := liblog libcutils
+LOCAL_MODULE_TAGS := optional
 
-# IRDA
-PRODUCT_PACKAGES += \
-    irda.piranha
-
-# Use the non-open-source parts, if they're present
-$(call inherit-product-if-exists, vendor/samsung/p51xx/p5110-vendor.mk)
+include $(BUILD_SHARED_LIBRARY)
