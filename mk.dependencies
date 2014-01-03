@@ -8,7 +8,7 @@
         "target_path": "vendor/samsung/p51xx"
     },
     {
-      "repository": "android_vendor_samsung/omap4-common",
+      "repository": "android_vendor_samsung_omap4-common",
       "target_path": "vendor/samsung/omap4-common"
     },
 {
