@@ -8,14 +8,14 @@
         "target_path": "vendor/samsung/p51xx"
     },
     {
-      "repository": "android_vendor_samsung_omap4-common",
-      "target_path": "vendor/samsung/omap4-common"
+        "repository": "android_vendor_samsung_omap4-common",
+        "target_path": "vendor/samsung/omap4-common"
     },
-{
-      "repository": "android_hardware_samsung",
-      "target_path": "hardware/samsung"
+    {
+        "repository": "android_hardware_samsung",
+        "target_path": "hardware/samsung"
     },
-{
+    {
         "repository": "android_device_samsung_p5100",
         "target_path": "device/samsung/p5100"
     },
@@ -25,8 +25,6 @@
     },
     {
         "repository": "android_packages_apps_SamsungServiceMode",
-        "target_path": "packages/apps/SamsungServiceMode",
-        "branch": "cm-11.0",
-        "remote": "cyanogen"
+        "target_path": "packages/apps/SamsungServiceMode"
     }
 ]
