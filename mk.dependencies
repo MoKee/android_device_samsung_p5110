@@ -4,7 +4,7 @@
         "target_path": "kernel/samsung/espresso10"
     },
     {
-        "repository": "MoKee/android_vendor_samsung_p51xx",
+        "repository": "android_vendor_samsung_p51xx",
         "target_path": "vendor/samsung/p51xx"
     },
     {
